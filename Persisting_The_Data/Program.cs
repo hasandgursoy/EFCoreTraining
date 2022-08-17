@@ -44,26 +44,26 @@ ETicaretContext context = new();
 // işleme özel kullanmakdan kaçınmalıyız. Çünkü her işleme özel transaction veritabanına maliyet oluşturur.
 // Tüm işlemleri tek bir transaction da yönetebilmek için aşşağıdaki gibi tek seferde kullanmak gerekiyor.
 
-Product p1 = new()
-{
-    Name = "product 1",
-    Price = 2000
-};
-Product p2 = new()
-{
-    Name = "product 2",
-    Price = 2000
-};
-Product p3 = new()
-{
-    Name = "product 3",
-    Price = 2000
-};
+//Product p1 = new()
+//{
+//    Name = "product 1",
+//    Price = 2000
+//};
+//Product p2 = new()
+//{
+//    Name = "product 2",
+//    Price = 2000
+//};
+//Product p3 = new()
+//{
+//    Name = "product 3",
+//    Price = 2000
+//};
 
-await context.AddRangeAsync(p1, p2, p3);
+//await context.AddRangeAsync(p1, p2, p3);
 
-// Tek seferde saveChanges edip verimli kullanıcaz ayrı ayrı değil.
-await context.SaveChangesAsync();
+//// Tek seferde saveChanges edip verimli kullanıcaz ayrı ayrı değil.
+//await context.SaveChangesAsync();
 
 #endregion
 
@@ -91,8 +91,6 @@ await context.SaveChangesAsync();
 
 
 #endregion
-
-
 
 #region Veri Nasıl Güncellenir ?
 
@@ -155,15 +153,69 @@ await context.SaveChangesAsync();
 #region Birden Fazla Veri Güncellenirken Nelere Dikkat Edilmelidir ? 
 
 // Bütün verileri al demek için toListAsync() 
-var products = await context.Products.ToListAsync();
+//var products = await context.Products.ToListAsync();
+
+//foreach (var product in products)
+//{
+//    product.Name += "*";
+//}
+//await context.SaveChangesAsync();
+
+#endregion
+
+#region Veri Nasıl Silinir ?
+// Product? product = await context.Products.FirstOrDefaultAsync(p => p.Id == 3);
+//context.Products.Remove(product);
+//await context.SaveChangesAsync();
+
+
+
+#endregion
+
+#region Silme İşleminde ChangeTracker'ın Rolü
+// ChangeTracker, context üzerinden gelen verilerin takibinden sorumlu bir mekanizmadır. Bu takip mekanizması sayesinde
+// context üzerinden gelen verilerle ilgili işlemler neticesinde update yahut delete sorgularının oluşturlacağı anlaşılır.
+
+
+#endregion
+
+#region Takip Edilmeyen Nesneler Nasıl Silinir ?
+
+//Product product = new()
+//{
+//    Id = 2
+//};
+
+//context.Products.Remove(product);
+//await context.SaveChangesAsync();
+
+#endregion
+
+#region EntityState ile Silme İşlemi
+//Product product = new Product { Id = 1 };
+//context.Entry(product).State = EntityState.Deleted;
+//await context.SaveChangesAsync();
+
+#endregion
+
+#region SaveChanges'ı Verimli Kullanma
+Product p1 = new Product { Id = 5 };
+Product p2 = new Product { Id = 1 };
+List<Product> products = new()
+{
+    p1,p2
+};
 
 foreach (var product in products)
 {
-    product.Name += "*";
+    context.Products.Remove(product);
 }
+
 await context.SaveChangesAsync();
 
+
 #endregion
+
 
 public class ETicaretContext : DbContext
 {
