@@ -1,9 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
 
-
-#region Veri Nasıl Eklenir ?
-
 ETicaretContext context = new();
 
 //Product product = new Product()
@@ -19,7 +16,6 @@ ETicaretContext context = new();
 // Bu sql kod'u arka planda dönüyor.
 
 #endregion
-
 
 
 #region context.AddAsync Fonksiyonu
@@ -64,7 +60,7 @@ Product p3 = new()
     Price = 2000
 };
 
-await context.AddRangeAsync(p1,p2,p3);
+await context.AddRangeAsync(p1, p2, p3);
 
 // Tek seferde saveChanges edip verimli kullanıcaz ayrı ayrı değil.
 await context.SaveChangesAsync();
@@ -96,9 +92,78 @@ await context.SaveChangesAsync();
 
 #endregion
 
+
+
+#region Veri Nasıl Güncellenir ?
+
+//Product? tablet = await context.Products.FirstOrDefaultAsync(p => p.Id == 3);
+
+//if (tablet is not null)
+//    tablet.Name = "Tablet";
+//    await context.SaveChangesAsync();
+
+
+
+#endregion
+
+#region ChangeTracker Nedir ? Kısaca!
+// ChangeTracker, context üzerinden gelen verilerin takibinden sorumlu bir mekanizmadır. Bu mekanizma sayesinde 
+// context üzerinden gelen verilerle ilgili işlemler neticesinde update yahut delete sorgularının oluşturulacağı anlaşılır
+
+
+#endregion
+
+#region Takip edilmeyen Nesneler Nasıl Güncellenir ?
+
+
+//Product elma = new()
+//{
+//    Id = 3,
+//    Name = "Elma",
+//    Price = 1231
+//};
+
+#region Update Fonksiyonu
+// ChangeTacker mekanizması tarafından takip edilmeyen nesnelerin güncellenebilmesi için Update fonksiyonu kullanılır !
+// Update fonksiyonu kullanabilmek için kesinlikle ilgili nesnede Id değeri verilmelidir. Bu değer güncellenecek
+// (update sorgusu oluşturulacak) verinin hangisi olduğunu ifade edecektir.
+
+//context.Products.Update(elma);
+//await context.SaveChangesAsync();
 #endregion
 
 
+#endregion
+
+#region EntityState Nedir ? 
+// Bir entity instance'ının durumunu ifade eden bir referansdır.
+//EntityState state = context.Entry(elma).State;
+
+
+#endregion
+
+#region EF Core açısından bir veri nasıl güncellenmeli ? 
+
+//Product? pro = await context.Products.FirstOrDefaultAsync(p => p.Id == 3);
+//pro.Name = "hilmi";
+//context.Products.Update(pro);
+//await context.SaveChangesAsync();
+
+
+#endregion
+
+#region Birden Fazla Veri Güncellenirken Nelere Dikkat Edilmelidir ? 
+
+// Bütün verileri al demek için toListAsync() 
+var products = await context.Products.ToListAsync();
+
+foreach (var product in products)
+{
+    product.Name += "*";
+}
+await context.SaveChangesAsync();
+
+#endregion
 
 public class ETicaretContext : DbContext
 {
@@ -112,7 +177,7 @@ public class ETicaretContext : DbContext
 
     }
 
-    
+
 
 }
 
