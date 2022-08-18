@@ -11,7 +11,7 @@ ETicaretContext context = new();
 
 #region Eklenen Verinin ID'si nasıl elde ediliyor ? 
 
-// INSET Products Values('H ürünü',2000)
+// INSERT Products Values('H ürünü',2000)
 // @ SELECT @@IDENTİTY 
 // Bu sql kod'u arka planda dönüyor.
 
@@ -106,7 +106,7 @@ ETicaretContext context = new();
 
 #region ChangeTracker Nedir ? Kısaca!
 // ChangeTracker, context üzerinden gelen verilerin takibinden sorumlu bir mekanizmadır. Bu mekanizma sayesinde 
-// context üzerinden gelen verilerle ilgili işlemler neticesinde update yahut delete sorgularının oluşturulacağı anlaşılır
+// context üzerinden gelen verilerle ilgili işlemler neticesinde insert, update ve delete sorgularının oluşturulacağı anlaşılır.
 
 
 #endregion
@@ -135,7 +135,7 @@ ETicaretContext context = new();
 
 #region EntityState Nedir ? 
 // Bir entity instance'ının durumunu ifade eden bir referansdır.
-//EntityState state = context.Entry(elma).State;
+// EntityState state = context.Entry(elma).State;
 
 
 #endregion
@@ -198,20 +198,20 @@ ETicaretContext context = new();
 
 #endregion
 
-#region SaveChanges'ı Verimli Kullanma
-Product p1 = new Product { Id = 5 };
-Product p2 = new Product { Id = 1 };
-List<Product> products = new()
-{
-    p1,p2
-};
+#region Veri Silerken SaveChanges'ı Verimli Kullanma
+//Product p1 = new Product { Id = 5 };
+//Product p2 = new Product { Id = 1 };
+//List<Product> products = new()
+//{
+//    p1,p2
+//};
 
-foreach (var product in products)
-{
-    context.Products.Remove(product);
-}
+//foreach (var product in products)
+//{
+//    context.Products.Remove(product);
+//}
 
-await context.SaveChangesAsync();
+//await context.SaveChangesAsync();
 
 
 #endregion

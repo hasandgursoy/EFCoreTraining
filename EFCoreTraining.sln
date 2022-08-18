@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnConfiguring_DefineTableName", "OnConfiguring_DefineTableName\OnConfiguring_DefineTableName.csproj", "{C26E0E49-EE8E-40A2-82CD-169AB77A5009}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persisting_The_Data", "Persisting_The_Data\Persisting_The_Data.csproj", "{CE1DC877-5B8E-46FE-AB8F-52298AB4E1CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persisting_The_Data", "Persisting_The_Data\Persisting_The_Data.csproj", "{CE1DC877-5B8E-46FE-AB8F-52298AB4E1CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Querying", "Querying\Querying.csproj", "{D6EC156D-2B09-4457-88FD-9073E228AFD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{CE1DC877-5B8E-46FE-AB8F-52298AB4E1CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE1DC877-5B8E-46FE-AB8F-52298AB4E1CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE1DC877-5B8E-46FE-AB8F-52298AB4E1CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6EC156D-2B09-4457-88FD-9073E228AFD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6EC156D-2B09-4457-88FD-9073E228AFD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6EC156D-2B09-4457-88FD-9073E228AFD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6EC156D-2B09-4457-88FD-9073E228AFD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
