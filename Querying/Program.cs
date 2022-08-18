@@ -89,7 +89,64 @@ ETicaretContext context = new();
 
 #endregion
 
+#region Çoğul Veri Getiren Sorgulama Fonksiyonları
 
+#region ToListAsync
+// Üretilen sorguyu execute etttirmemizi sağlayan bir fonksiyondur.
+//var products = context.Products.ToListAsync();
+//var products2 = (from product in context.Products
+//                select product).ToListAsync();
+#endregion
+
+#region Where
+// Oluşturulan sorguya where şartı eklememizi sağlayan bir fonksiyondur.
+//var products = await context.Products.Where(p => p.Name.Length < 10 && p.Id < 50).ToListAsync();
+//var products2 = from product in context.Products
+//                where product.Name.Length < 10 && product.Id < 50
+//                select product;
+//var newProducts2 = await products2.ToListAsync(); // Deffered Execution
+#endregion
+
+#region OrderBy
+// Sorgu üzerinde sıralama yapmamızı sağlayan bir fonksiyondur. (Ascending)
+
+//var products = await context.Products.Where(p => p.Id > 500 || p.Name.EndsWith("2"))
+//    .OrderBy(p => p.Name).ToListAsync();
+
+//var products2 = await (from product in context.Products
+//                where product.Id > 500 || product.Name.EndsWith("2")
+//                orderby product.Name ascending // default olarak ascendingdir.
+//                select product).ToListAsync();
+#endregion
+
+#region ThenBy
+// OrderBy üzerinde yapılan sıralama işlemini farklı kolonlarada uygulamamızı sağlayan fonksiyondur. (ascending)
+// Products'ın içindeki verileri isme göre order by ile sıraladık ama onda da mükerrer olanlar var ise Id'ye baksın
+// ondada mükerrer olanlar varsa price'a baksın diyebiliyoruz
+//var products = await context.Products.Where(p => p.Id > 500 || p.Name.EndsWith("2"))
+//              .OrderBy(p => p.Name).ThenBy(p => p.Id).ThenBy(p => p.Price).ToListAsync();
+#endregion
+
+#region OrderByDescending
+// Descending yapısında sıralama yapar örnek büyükden küçüğe veya Z -> A 
+//var products = await context.Products.OrderByDescending(p => p.Price).ToListAsync();
+
+//var products2 = await (from product in context.Products
+//                       orderby product.Price descending
+//                       select product).ToListAsync();
+
+
+
+
+#endregion
+
+#region ThenByDescending
+//var products = await context.Products.OrderByDescending(p => p.Id).ThenByDescending(p => p.Name).ToListAsync();
+
+
+#endregion
+
+#endregion
 
 
 
@@ -108,7 +165,6 @@ public class ETicaretContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseNpgsql("Server=127.0.0.1;Port=5432;Database=ETicaretDb;User Id=postgres;Password=postgres;");
-
     }
 
 
