@@ -148,8 +148,6 @@ ETicaretContext context = new();
 
 #endregion
 
-// -----------------------------------------
-
 #region Tekil Veri Getiren Sorgulama Fonksiyonları
 // Yapılan sorguda sadece tek bir verinin gelmesini amaçlıyorsak single ya da single or default 
 // fonksiyonları kullanılabilir.
@@ -201,12 +199,149 @@ ETicaretContext context = new();
 
 #endregion
 
+#endregion
+
+#region Diger Sorgulama Fonksiyonları
+
+#region CountAsync
+// Oluşturulan sorgunun execute edilmesi neticesinde kaç adet satırın elde edileceğini sayısal olarak bildirir.
+// Maliyeti TolistAsync().Count() demek den çok daha azdır. Belleğe çekmeden veri tabanında sayıp int değer alırız.
+//var products = context.Products.CountAsync();
 
 #endregion
 
+#region LongCountAsync
+// Oluşturulan sorgunun execute edilmesi neticesinde kaç adet satırın elde edileceğini Long olarak geri döner.
+//var products = context.Products.LongCountAsync(p => p.Price % 7 == 0);
+
+#endregion
+
+#region AnyAsync
+// Sorgu neticesinde verinin gelip gelmediğini boolean olarak veren fonksiyondur.
+// Bu değer var mı yok mu arkadaş ? diye sorar.
+//var products = await context.Products.Where(p => p.Name.Contains('1')).AnyAsync();
+
+#endregion
+
+#region MaxAsync
+//var fiyat = await context.Products.MaxAsync(u => u.Price);
+
+#endregion
+
+#region MinAsync
+// Minumum değeri getirir.
+//var fiyat = await context.Products.MinAsync(p => p.Price);
+
+#endregion
+
+#region Distinct
+// Sorguda mükerrer kayıtlar varsa bunları tekilleştiren bir işleve sahiptir.
+//var products = context.Products.Distinct().ToListAsync();
+
+#endregion
+
+#region AllAsync
+// Bir sorgu neticesinde gelen verilerin, verilen şartlara uyup uymadığını kontrol eder.
+// True , False döner.
+
+//var m = context.Products.AllAsync( u => u.Price > 5000 && u.Id > 500);
 
 
+#endregion
 
+#region SumAsync
+// Vermiş olduğumuz sayısal property'nin toplamını alır.
+//var fiyatToplam = await context.Products.SumAsync(p => p.Price);
+
+#endregion
+
+#region AverageAsync
+// Vermiş olduğumuz sayısal propertynin aritmetik ortalamasını alır.
+//var aritmetikOrtalama = await context.Products.AverageAsync(p => p.Price);
+
+#endregion
+
+#region ContainsAsync
+// İçeriyormu diye bakar.
+// Eğer Where ile kullanmaz isek %.....% sorgusu yapar bu da yavaştır.
+//var products = context.Products.Where(p => p.Name.Contains('7')).ToListAsync();
+
+
+#endregion
+
+#region StartsWith and EndsWith
+// Başlarken ve biterken ne ile bitiyor diye bakar.
+// Like '....%' sorgusu oluşturmamızı sağlar.
+
+
+#endregion
+
+#endregion
+
+#region Sorgu Sonucu Dönüşüm Fonksiyonları
+// Bu fonksiyonlar ile sorgu neticesinde elde edilen verileri istediğimiz doğrultusunda
+// farklı türlerde projecsiyon edebiliyoruz.
+
+#region ToDictionaryAsync
+// Sorgu neticesinde gelecek olan veriyi bir dictionary olarak elde etmek/tutmak/karşılamak istiyorsak kullanılır.
+// Bize Bir Dictionary dönecektir.
+//var products = await context.Products.ToDictionaryAsync(p => p.Name, p => p.Price);
+
+#endregion
+
+#region ToArrayAsync
+// Oluşturulan sorguyu dizi olarak elde eder.
+// ToList ile muadil amaca hizmet eder. Yani sorguyu execute eder lakin sonucu entity dizisi olarak elde eder.
+
+//var products = context.Products.ToArrayAsync();
+
+
+#endregion
+
+#region Select
+// Bu kısım çok önemli
+// Select fonksiyonun işlevsel olarak birden fazla davranışı vardır.
+// 1. Select fonksiyonu, generate edilecek sorgunun çekilecek kolonlarını ayarlamamızı sağlar.
+
+//var products = await context.Products.Select(u => new Product
+//{
+//    Id = u.Id,
+//    Price = u.Price
+//}).ToListAsync();
+
+// 2. Select fonksiyonu, gelen verileri farklı türlerde karşılamamızı sağlar. T, Anonim
+//var products = await context.Products.Select(u => new // ürün referansı yok :D
+//{
+//    Id = u.Id,
+//    Price = u.Price
+//}).ToListAsync();
+
+//var products = await context.Products.Select(u => new ProductDetails // ürün referansı yok :D
+//{
+//    Id = u.Id,
+//    Price = u.Price
+//}).ToListAsync();
+
+#endregion
+
+#region SelectMany
+// Select ile aynı amaca hizmet eder. Lakin, ilişkisel tablolar neticesinde gelen koloneksiyonel verileri
+// de tekilleştirip projeksiyon etmemizi sağlar.
+
+//var products = await context.Products.Include(p => p.Parts).SelectMany(p => p.Parts, (product, part) => new
+//{
+
+//    product.Id,
+//    product.Name,
+//    part.PartName
+
+
+//}).ToListAsync();
+
+
+#endregion
+
+#endregion
 
 
 public class ETicaretContext : DbContext
@@ -257,4 +392,12 @@ public class ProductPart
     public int PartId { get; set; }
     public Product Product { get; set; }
     public Part Part { get; set; }
+}
+
+
+class ProductDetails
+{
+    public int Id { get; set; }
+    public int Price { get; set; }
+
 }
