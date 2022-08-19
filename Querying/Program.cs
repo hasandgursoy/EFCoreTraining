@@ -148,7 +148,61 @@ ETicaretContext context = new();
 
 #endregion
 
+// -----------------------------------------
 
+#region Tekil Veri Getiren Sorgulama Fonksiyonları
+// Yapılan sorguda sadece tek bir verinin gelmesini amaçlıyorsak single ya da single or default 
+// fonksiyonları kullanılabilir.
+
+
+#region SingleAsync
+// Eğer ki, sorgu neticesinde bir den fazla veri geliyorsa ya da hiç gelmiyorsa her iki durumda da exception fırlatır.
+//var product = await context.Products.SingleAsync();
+
+#endregion
+
+#region SingleOrDefaultAsync
+// Eğer ki, sorgu neticesinde birden fazla geliyorsa exception, hiç veri gelmiyorsa null döner.
+//var product = await context.Products.SingleOrDefaultAsync();
+
+#endregion
+
+#region FirstAsync
+// Yapılan sorguda tek bir verinin gelmesi amaçlıyorsak First veya FirstOrDefault fonksiyonları kullanılabilir.
+// Sorgu neticesinde elde edilen verilerden ilkini getirir. Eğerki hiç veri gelmiyorsa hata fırlatır.
+//var product = await context.Products.FirstAsync();
+#endregion
+
+#region FirstOrDefaultAsync
+// Sorgu neticesinde elde edilen verilerden ilkini getirir. Eğer ki hiç veri gelmiyorsa null değerini döndürür.
+//var product = await context.Products.FirstOrDefaultAsync();
+#endregion
+
+#region FindAsync
+// Find fonksiyonu, primary key kolonuna özel hızlı bir şekilde sorgulama yapmamızı sağlayan fonksiyondur.
+// Sorgulama sürecinde önce context içerisini kontrol eder ve kaydı bulamadığı takdirde sorguyu veritabanına gönderir.
+
+
+//Product? product = await context.Products.FindAsync(55);
+
+#region Composite Primary Key Durumu
+// Composite Key = Birden fazla ID tanımlamamız gereken durumlarda kullanılır.
+
+//var pp = await context.ProductsParts.FindAsync(2,5);
+
+
+#endregion
+
+
+#endregion
+
+#region LastAsync and LastOrDefaultAsync
+// FirstAsync ile FirstOrDefaultAsync arasında ki tek fark sondaki veriyi alıyor.
+
+#endregion
+
+
+#endregion
 
 
 
@@ -162,11 +216,20 @@ public class ETicaretContext : DbContext
     public DbSet<Product> Products { get; set; }
     public DbSet<Part> Parts { get; set; }
 
+    public DbSet<ProductPart> ProductsParts { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseNpgsql("Server=127.0.0.1;Port=5432;Database=ETicaretDb;User Id=postgres;Password=postgres;");
     }
 
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        // Composite PrimaryKey
+        // Composite Key = Birden fazla ID tanımlamamız gereken durumlarda kullanılır.
+
+        modelBuilder.Entity<ProductPart>().HasKey(pp => new { pp.ProductId, pp.PartId });
+    }
 
 
 }
@@ -185,4 +248,13 @@ public class Part
     public int Id { get; set; }
     public string PartName { get; set; }
 
+}
+
+public class ProductPart
+{
+    // Composite Key = Birden fazla ID tanımlamamız gereken durumlarda kullanılır.
+    public int ProductId { get; set; }
+    public int PartId { get; set; }
+    public Product Product { get; set; }
+    public Part Part { get; set; }
 }
