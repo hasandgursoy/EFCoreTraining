@@ -343,6 +343,55 @@ ETicaretContext context = new();
 
 #endregion
 
+#region GrupBy Fonksiyonu
+// Gruplama Yapmamızı Sağlayan Fonksiyondur. Nihai istatistiksel verileri yakalamamızı sağlar.
+// Önce gruplandırıyor daha sonra biz içinden ihtiyacımız olan verileri alıyoruz.
+
+
+#region Method Syntax
+//var datas = await context.Products.GroupBy(p => p.Price).Select(group => new
+//{
+//    Count = group.Count(),
+//    Price = group.Key
+
+//}).ToListAsync(); ;
+
+#endregion
+
+#region Query Syntax
+//var datas = from product in context.Products
+//            group product by product.Price
+//            into @group
+//            select new
+//            {
+//                Count = @group.Count(),
+//                Price = @group.Key
+//            };
+
+#endregion
+
+
+#endregion
+
+#region Foreach Fonksiyonu
+// Bir sorgulama fonksiyonu değildir.
+// Sorgulama neticesinde elde edilen koleksiyonel veriler üzerinde iterasyonel olarak dönmemizi sağlayan ve teker teker 
+// verileri elde edip işlemler yapabilmemizi sağlayan bir fonksiyondur. foreach döngüsünün metot halidir.
+
+//var datas = await context.Products.GroupBy(p => p.Price).OrderBy(p => p.Count()).Select(x => new
+//{
+//    Count = x.Count(),
+//    Price = x.Key
+
+//}).ToListAsync();
+
+//datas.ForEach(x =>
+//{
+
+//});
+
+#endregion
+
 
 public class ETicaretContext : DbContext
 {
