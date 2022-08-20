@@ -34,7 +34,7 @@ public class EticaretContext : DbContext
 
 #region Basit Düzetde Entity Tanımlama Kuralları
 // EF Core, her tablonun default olarak bir primary key kolonu olması gerektiğini kabul eder.
-// Haliyle, bu kolonu temsil eden bir property tanımladığımız takdirde hata verecekdir.
+// Haliyle, bu kolonu temsil eden bir property tanımlamadığımız takdirde hata verecekdir.
 
 
 #endregion

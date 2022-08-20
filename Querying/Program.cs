@@ -31,8 +31,6 @@ ETicaretContext context = new();
 // Sorgunun çalıştırılıp/execute edilip verilerin in memorye yüklenmiş halini ifade eder.
 #endregion
 
-
-
 #endregion
 
 #region Sorguyu Execute Etmek İçin Ne Yapmamız Gerekmektedir ? 
@@ -186,7 +184,7 @@ ETicaretContext context = new();
 #region Composite Primary Key Durumu
 // Composite Key = Birden fazla ID tanımlamamız gereken durumlarda kullanılır.
 
-//var pp = await context.ProductsParts.FindAsync(2,5);
+var pp = await context.ProductsParts.FindAsync(2,5);
 
 
 #endregion
@@ -263,7 +261,6 @@ ETicaretContext context = new();
 
 #region ContainsAsync
 // İçeriyormu diye bakar.
-// Eğer Where ile kullanmaz isek %.....% sorgusu yapar bu da yavaştır.
 //var products = context.Products.Where(p => p.Name.Contains('7')).ToListAsync();
 
 
@@ -316,7 +313,7 @@ ETicaretContext context = new();
 //    Price = u.Price
 //}).ToListAsync();
 
-//var products = await context.Products.Select(u => new ProductDetails // ürün referansı yok :D
+//var products = await context.Products.Select(u => new ProductDetails
 //{
 //    Id = u.Id,
 //    Price = u.Price
@@ -354,7 +351,7 @@ ETicaretContext context = new();
 //    Count = group.Count(),
 //    Price = group.Key
 
-//}).ToListAsync(); ;
+//}).ToListAsync();
 
 #endregion
 
