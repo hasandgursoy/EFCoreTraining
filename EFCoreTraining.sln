@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persisting_The_Data", "Pers
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Querying", "Querying\Querying.csproj", "{D6EC156D-2B09-4457-88FD-9073E228AFD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeTracker", "ChangeTracker\ChangeTracker.csproj", "{7B616780-A955-4C27-A74F-B680E4DAA876}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChangeTracker", "ChangeTracker\ChangeTracker.csproj", "{7B616780-A955-4C27-A74F-B680E4DAA876}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracking", "Tracking\Tracking.csproj", "{212B00ED-2C32-4135-98FB-D907400FF016}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tracking", "Tracking\Tracking.csproj", "{212B00ED-2C32-4135-98FB-D907400FF016}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Relations", "Relations\Relations.csproj", "{6807C088-BB5F-4946-B778-2D556D976AF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{212B00ED-2C32-4135-98FB-D907400FF016}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{212B00ED-2C32-4135-98FB-D907400FF016}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{212B00ED-2C32-4135-98FB-D907400FF016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6807C088-BB5F-4946-B778-2D556D976AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6807C088-BB5F-4946-B778-2D556D976AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6807C088-BB5F-4946-B778-2D556D976AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6807C088-BB5F-4946-B778-2D556D976AF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
