@@ -1,8 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Collections.Generic;
 using System.Reflection.Emit;
 
 ETicaretContext context = new();
+
 
 
 #region Change Tracking Nedir ?
@@ -82,7 +84,7 @@ ETicaretContext context = new();
 
 #region AcceptAllChanges Methodu
 // SaveChagnes() veya SaveChanges(true) tetiklendiğinde EF Core herşeyin yolunda olduğunu varsayarak track ettiği verilerin 
-// takibini keser yeni değişikliklern takip edilmesini bekler. Böyle bir durumda beklenmeyen bir durum
+// takibini keser yeni değişikliklerin takip edilmesini bekler. Böyle bir durumda beklenmeyen bir durum
 // olası bir hata söz konusu olursa eğer EF Core takip ettiği nesneleri bırakacağı için bir düzeltme mevzu bahis olmayacaktır.
 
 // Haliyle bu durumda devreye SaveChanges(false) yada AcceptAllChanges metotları devreye girecektir.
@@ -187,7 +189,7 @@ public class ETicaretContext : DbContext
     public override int SaveChanges()
     {
         // Burda bir Interceptor görevi görerek araya girdik ve bu şekilde müdahele ettik.
-        var entries = ChangeTracker.Entries<Product>();
+        IEnumerable<EntityEntry<Product>> entries = ChangeTracker.Entries<Product>();
         foreach (var entry in entries)
         {
             if (entry.State == EntityState.Added)

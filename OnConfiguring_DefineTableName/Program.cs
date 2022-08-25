@@ -7,9 +7,9 @@ Console.WriteLine();
 public class EticaretContext : DbContext
 {
     #region Tablo Adı Belirleme
+    public DbSet<Urun> Urunler { get; set; }
 
     #endregion
-    public DbSet<Urun> Urunler { get; set; }
 
 
 
@@ -32,7 +32,7 @@ public class EticaretContext : DbContext
 
 }
 
-#region Basit Düzetde Entity Tanımlama Kuralları
+#region Basit Düzeyde Entity Tanımlama Kuralları
 // EF Core, her tablonun default olarak bir primary key kolonu olması gerektiğini kabul eder.
 // Haliyle, bu kolonu temsil eden bir property tanımlamadığımız takdirde hata verecekdir.
 

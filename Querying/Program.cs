@@ -55,7 +55,7 @@ ETicaretContext context = new();
 
 #region Deferred Execution Yapısına Derin bakış
 // IQueryable çalışmalarında ilgili kod yazıldığı noktada çalıştırılmaz/tetiklenmez.
-// Nerede eder ? Çalıştırıldığı/execute edildiği noktada tetiklenir bu durumada erlenmiş çalışma denir.
+// Nerede eder ? Çalıştırıldığı/execute edildiği noktada tetiklenir bu durumada ertelenmiş çalışma denir.
 // productId en başta 5 atanmasına rağmen buna göre sorgu yapıldığı düşünebiliriz ancak durum böyle değil 
 // execute etmeden hemen önce son değerine bakar aşşağıda 230 var ona göre hareket eder.
 // Sorgu yapılır yapılmaz hemen ToListAsync() dersek bu defferred execution olmaz ama sonra yaparsak bu yine deffered execution olur.
@@ -91,8 +91,8 @@ ETicaretContext context = new();
 
 #region ToListAsync
 // Üretilen sorguyu execute etttirmemizi sağlayan bir fonksiyondur.
-//var products = context.Products.ToListAsync();
-//var products2 = (from product in context.Products
+// var products = context.Products.ToListAsync();
+// var products2 = (from product in context.Products
 //                select product).ToListAsync();
 #endregion
 

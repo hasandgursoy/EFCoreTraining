@@ -39,7 +39,7 @@ var context = new ETicaretContext();
 // dataları tek bir instance üzerinde karşılamak için AsNoTrackingWithIdentityResolution fonksiyonu kullanılabilir.
 
 // İlişki kurduğumuz yapılarda daha faydalıdır.
-// Sorgu yapıalrında track mekanizmasına ihtiyac yoktur bunuda doğru yolla yapmak lazım 
+// Sorgu yapılarında track mekanizmasına ihtiyac yoktur bunuda doğru yolla yapmak lazım 
 // Her yazara bir kitap yada her kitaba bir yazar atamak doğru değil bunun için bu yapıyı kullanıyoruz.
 // Çünkü bir yazarın birden fazla kitabı olabilir.Bu yüzden her kitap için aynı yazarı bir daha oluşturmanın bir manası yok.
 
