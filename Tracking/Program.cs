@@ -86,7 +86,7 @@ public class ETicaretContext : DbContext
         // Eğer bu şekilde NoTracking de bırakırsak sürekli AsTracking kullanmak zorunda kalabiliriz.
         optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 
-
+            
 
     }
 
