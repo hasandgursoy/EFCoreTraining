@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "One_To_Many_Relationship", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Many_To_Many_Realitonship", "Many_To_Many\Many_To_Many_Realitonship.csproj", "{908EE953-FCEC-498A-9643-BDE62C078EAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saving_Related_Data", "Saving_Related_Data\Saving_Related_Data.csproj", "{555C3B4D-D9BC-4B17-BAB1-F5892421FA75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{908EE953-FCEC-498A-9643-BDE62C078EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{908EE953-FCEC-498A-9643-BDE62C078EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{908EE953-FCEC-498A-9643-BDE62C078EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{555C3B4D-D9BC-4B17-BAB1-F5892421FA75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{555C3B4D-D9BC-4B17-BAB1-F5892421FA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{555C3B4D-D9BC-4B17-BAB1-F5892421FA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{555C3B4D-D9BC-4B17-BAB1-F5892421FA75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
