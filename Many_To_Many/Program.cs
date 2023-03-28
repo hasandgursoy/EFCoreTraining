@@ -2,6 +2,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+System.Console.WriteLine("Hello");
+
 #region Default Convention
 // İki entity arasınadaki entity arasındaki ilişkiyi navigation propertyler üzerinden çoğul olarak kurmalıyız.
 // (ICollection, List) evet evet list yapısıda oluyor :D 

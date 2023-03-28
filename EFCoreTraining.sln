@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Many_To_Many_Realitonship",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saving_Related_Data", "Saving_Related_Data\Saving_Related_Data.csproj", "{555C3B4D-D9BC-4B17-BAB1-F5892421FA75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Update_Related_Data", "Update_Related_Data\Update_Related_Data.csproj", "{90834FBC-0AC2-41AA-A5AF-E94D8E438AF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{555C3B4D-D9BC-4B17-BAB1-F5892421FA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{555C3B4D-D9BC-4B17-BAB1-F5892421FA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{555C3B4D-D9BC-4B17-BAB1-F5892421FA75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90834FBC-0AC2-41AA-A5AF-E94D8E438AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90834FBC-0AC2-41AA-A5AF-E94D8E438AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90834FBC-0AC2-41AA-A5AF-E94D8E438AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90834FBC-0AC2-41AA-A5AF-E94D8E438AF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

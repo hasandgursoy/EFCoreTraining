@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection.Emit;
 
+System.Console.WriteLine("Hello");
+
+
 #region Default Convetion
 // Default convetion yönteminde bire çok ilişki kurarken foreign key kolonuna karşı gelen bir property
 // tanımlamak mecburiyetinde değiliz. Eğer tanımlamassak EF Core bunu kendisi tamamlayacak yok eğer tanımlarsak,
