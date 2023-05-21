@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/BackingFields/bin/Debug/net7.0/BackingFields.dll",
+            "program": "${workspaceFolder}/ShadowProperty/bin/Debug/net7.0/ShadowProperty.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/BackingFields",
+            "cwd": "${workspaceFolder}/ShadowProperty",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false

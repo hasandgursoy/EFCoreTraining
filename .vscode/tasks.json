@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/BackingFields/BackingFields.csproj",
+                "${workspaceFolder}/ShadowProperty/ShadowProperty.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/BackingFields/BackingFields.csproj",
+                "${workspaceFolder}/ShadowProperty/ShadowProperty.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/BackingFields/BackingFields.csproj"
+                "${workspaceFolder}/ShadowProperty/ShadowProperty.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
