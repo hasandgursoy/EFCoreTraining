@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Update_Related_Data", "Upda
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deleting_Related_Data", "Deleting_Related_Data\Deleting_Related_Data.csproj", "{849BF869-0CAD-43C3-98DB-4322DF7FF049}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackingFields", "BackingFields\BackingFields.csproj", "{E3F0A4EE-B1C4-4437-B75E-7C18EE581597}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{849BF869-0CAD-43C3-98DB-4322DF7FF049}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{849BF869-0CAD-43C3-98DB-4322DF7FF049}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{849BF869-0CAD-43C3-98DB-4322DF7FF049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F0A4EE-B1C4-4437-B75E-7C18EE581597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F0A4EE-B1C4-4437-B75E-7C18EE581597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F0A4EE-B1C4-4437-B75E-7C18EE581597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F0A4EE-B1C4-4437-B75E-7C18EE581597}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

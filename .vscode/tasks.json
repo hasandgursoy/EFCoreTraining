@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Deleting_Related_Data/Deleting_Related_Data.csproj",
+                "${workspaceFolder}/BackingFields/BackingFields.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Deleting_Related_Data/Deleting_Related_Data.csproj",
+                "${workspaceFolder}/BackingFields/BackingFields.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Deleting_Related_Data/Deleting_Related_Data.csproj"
+                "${workspaceFolder}/BackingFields/BackingFields.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

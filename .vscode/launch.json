@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Deleting_Related_Data/bin/Debug/net7.0/Deleting_Related_Data.dll",
+            "program": "${workspaceFolder}/BackingFields/bin/Debug/net7.0/BackingFields.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Deleting_Related_Data",
+            "cwd": "${workspaceFolder}/BackingFields",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
