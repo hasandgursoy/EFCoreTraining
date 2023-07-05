@@ -88,7 +88,7 @@ ApplicationDbContext context = new();
 #endregion
 
 #endregion
-
+  
 #region Configurations | Fluent API
 
 #region Composite Key
