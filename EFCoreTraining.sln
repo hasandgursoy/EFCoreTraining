@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data_Seeding", "Data_Seedin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Table_Per_Hirearchy", "Table_Per_Hirearchy\Table_Per_Hirearchy.csproj", "{1F99B288-9B13-4E08-B302-910CFD426193}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Table_Per_Type", "Table_Per_Type\Table_Per_Type.csproj", "{8F370685-E7E3-4DDE-8700-8AAB81BFE601}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{1F99B288-9B13-4E08-B302-910CFD426193}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F99B288-9B13-4E08-B302-910CFD426193}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F99B288-9B13-4E08-B302-910CFD426193}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F370685-E7E3-4DDE-8700-8AAB81BFE601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F370685-E7E3-4DDE-8700-8AAB81BFE601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F370685-E7E3-4DDE-8700-8AAB81BFE601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F370685-E7E3-4DDE-8700-8AAB81BFE601}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
