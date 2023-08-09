@@ -49,13 +49,16 @@ ApplicationDbContext context = new();
 #region Eager Loading İçin Kritik Bir Bilgi
 //EF Core, önceden üretilmiş ve execute edilerek verileri belleğe alınmış olan sorguların verileri, sonraki sorgularda KULLANIR!
 
+// Normalde aşşağıda ki sorguda contetxt.Employess.ToListAsync() dediğimizde orders'ı include etmediğimiz için getirmez. Ancak Daha önce context.Orders.ToListAsync() çağırdığımız için ef core o bilgiyi memory'de tutar ve include gerekli olmaksızın context.Employees.ToListAsync() içerisinde getirir.
+
+
 //var orders = await context.Orders.ToListAsync();
 
 //var employees = await context.Employees.ToListAsync();
 
 #endregion
 #region AutoInclude - EF Core 6
-//Uygulama seviyesinde bir entitye karşılık yapılan tüm sorgulamalarda "kesinlikle" bir tabloya Include işlemi gerçekleştirlecekse eğer bunu her bir sorgu için tek tek yapmaktansa merkezi bir hale getirmemizi sağlayan özelliktir.
+//Uygulama seviyesinde bir entitye karşılık yapılan tüm sorgulamalarda "kesinlikle" bir tabloya Include işlemi gerçekleştirlecekse eğer bunu her bir sorgu için tek tek yapmaktansa merkezi bir hale getirmemizi sağlayan özelliktir. OnModelCreating De yapıyoruz.
 
 //var employees = await context.Employees.ToListAsync();
 #endregion
