@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loading_Related_Data", "Loa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Explicit_Loading", "Explicit_Loading\Explicit_Loading.csproj", "{44565890-88B5-4E86-A324-1D2963508849}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lazy_Loading", "Lazy_Loading\Lazy_Loading.csproj", "{3ADCD261-2348-45C7-B520-43B3F3138033}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,10 @@ Global
 		{44565890-88B5-4E86-A324-1D2963508849}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44565890-88B5-4E86-A324-1D2963508849}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44565890-88B5-4E86-A324-1D2963508849}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ADCD261-2348-45C7-B520-43B3F3138033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ADCD261-2348-45C7-B520-43B3F3138033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ADCD261-2348-45C7-B520-43B3F3138033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ADCD261-2348-45C7-B520-43B3F3138033}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
