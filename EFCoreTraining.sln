@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lazy_Loading", "Lazy_Loadin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Complex_Relational_Quries", "Complex_Relational_Quries\Complex_Relational_Quries.csproj", "{D314E83B-E62C-43C0-B5D8-4EE66D7B662C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQL_Queries", "SQL_Queries\SQL_Queries.csproj", "{7B00FBA1-EEFD-4EF3-8851-73AD14D0DD7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +173,10 @@ Global
 		{D314E83B-E62C-43C0-B5D8-4EE66D7B662C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D314E83B-E62C-43C0-B5D8-4EE66D7B662C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D314E83B-E62C-43C0-B5D8-4EE66D7B662C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B00FBA1-EEFD-4EF3-8851-73AD14D0DD7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B00FBA1-EEFD-4EF3-8851-73AD14D0DD7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B00FBA1-EEFD-4EF3-8851-73AD14D0DD7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B00FBA1-EEFD-4EF3-8851-73AD14D0DD7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
