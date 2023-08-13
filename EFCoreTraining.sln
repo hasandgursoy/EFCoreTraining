@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Explicit_Loading", "Explici
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lazy_Loading", "Lazy_Loading\Lazy_Loading.csproj", "{3ADCD261-2348-45C7-B520-43B3F3138033}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Complex_Relational_Quries", "Complex_Relational_Quries\Complex_Relational_Quries.csproj", "{D314E83B-E62C-43C0-B5D8-4EE66D7B662C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{3ADCD261-2348-45C7-B520-43B3F3138033}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ADCD261-2348-45C7-B520-43B3F3138033}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ADCD261-2348-45C7-B520-43B3F3138033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D314E83B-E62C-43C0-B5D8-4EE66D7B662C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D314E83B-E62C-43C0-B5D8-4EE66D7B662C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D314E83B-E62C-43C0-B5D8-4EE66D7B662C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D314E83B-E62C-43C0-B5D8-4EE66D7B662C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
