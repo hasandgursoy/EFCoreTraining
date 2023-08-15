@@ -10,6 +10,7 @@ ApplicationDbContext context = new();
 //Manuel bir şekilde/tarafımızca oluşturulmuş olan sorguları EF Core tarafından execute edebilmek için o sorgunun sonucunu karşılayacak bir entity model'ın tasarlanmış ve bunun DbSet olarak context nesnesine tanımlanmış olması gerekiyor.
 #region FromSqlInterpolated
 //EF Core 7.0 sürümünden önce ham sorguları execute edebildiğimiz fonksiyondur.
+// Verileri String Interpolated olarak vermemiz gerekiyor çünkü SQL injection'ının önüne geçecek mekanizmalar var ve bunun için ön şart string interpolation şartı var.
 //var persons = await context.Persons.FromSqlInterpolated($"SELECT * FROM Persons")
 //    .ToListAsync();
 #endregion
@@ -47,6 +48,7 @@ ApplicationDbContext context = new();
 //    .ToListAsync();
 #endregion
 #region Örnek 4
+// Ufak bir hatırlatma kendime SqlParameter normal bir değişkeni FromSql içinde yazmaktan daha hızlıdır.
 //SqlParameter personId = new("PersonId", "3");
 //var persons = await context.Persons.FromSql($"EXECUTE dbo.sp_GetAllPersons {personId}")
 //    .ToListAsync();
@@ -66,6 +68,7 @@ ApplicationDbContext context = new();
 
 //EF Core dinamik olarak oluşturulan sorgularda özellikle kolon isimleri parametreleştirilmişse o sorguyu ÇALIŞTIRMAYACAKTIR!
 
+// Kolon ismini parametre olarak alacaksak ve hem kolon ismini hem parametreyi değer olarak atamak istiyorsak FromSqlRaw kullanmak gerekiyor.
 //string columnName = "PersonId";
 //SqlParameter value = new("PersonId", "3");
 //var persons = await context.Persons.FromSqlRaw($"Select * From Persons Where {columnName} = @PersonId", value)
@@ -90,6 +93,7 @@ ApplicationDbContext context = new();
 
 #endregion
 #region ExecuteSql
+// Mümkün olduğunda bu yöntemi kullanmamak lazım ORM'in tip güvenli imkanlarıyla hareket etmek ve savechanges methodu tetiklenerek yapılması tavsiye edilmektedir.ExecuteSql o yüzden çok kısır bir durumda tetiklenmelidir ve aynı zamanda savechanges'a gerek duymamaktadır.
 //Insert, update, delete
 //await context.Database.ExecuteSqlAsync($"Update Persons SET Name = 'Fatma' WHERE PersonId = 1");
 #endregion
