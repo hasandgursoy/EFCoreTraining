@@ -8,6 +8,24 @@ ApplicationDbContext context = new();
 //SP, view'ler gibi kompleks sorgularımızı daha basit bir şekilde tekrar kullanılabilir  bir hale getirmemiz isağlayan veritabanı nesnesidir. 
 //View'ler tablo misali bir davranış sergilerken, SP'lar ise fonksiyonel bir davranış sergilerler (Parametre alır).
 //Ve türlü türlü artılarıda vardır.
+//  protected override void Up(MigrationBuilder migrationBuilder)
+//         {
+//             migrationBuilder.Sql($@"
+//                         CREATE PROCEDURE sp_PersonOrders
+//                         AS
+// 	                        SELECT p.Name, COUNT(*) [Count] FROM Persons p
+// 	                        JOIN Orders o
+// 		                        ON p.PersonId = o.PersonId
+// 	                        GROUP By p.Name
+// 	                        ORDER By COUNT(*) DESC
+//                         ");
+//         }
+
+//         /// <inheritdoc />
+//         protected override void Down(MigrationBuilder migrationBuilder)
+//         {
+//             migrationBuilder.Sql($@"DROP PROC sp_PersonOrders");
+//         }
 #endregion 
 
 #region EF Core İle Stored Procedure Kullanımı
