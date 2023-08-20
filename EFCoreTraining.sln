@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQL_Queries", "SQL_Queries\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Views\Views.csproj", "{ECEEFD7D-C555-4F77-9FA9-949E70059FDD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore_AdoNET", "EFCore_AdoNET\EFCore_AdoNET.csproj", "{77FAB60E-4E4E-447F-81DA-CC0C0DEB0EF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +185,10 @@ Global
 		{ECEEFD7D-C555-4F77-9FA9-949E70059FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECEEFD7D-C555-4F77-9FA9-949E70059FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECEEFD7D-C555-4F77-9FA9-949E70059FDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77FAB60E-4E4E-447F-81DA-CC0C0DEB0EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77FAB60E-4E4E-447F-81DA-CC0C0DEB0EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77FAB60E-4E4E-447F-81DA-CC0C0DEB0EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77FAB60E-4E4E-447F-81DA-CC0C0DEB0EF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
