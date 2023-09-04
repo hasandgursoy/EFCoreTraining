@@ -10,11 +10,11 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/ShadowProperty/bin/Debug/net7.0/ShadowProperty.dll",
+            "program": "${workspaceFolder}/EF_Core_Efficient_Querying/bin/Debug/net7.0/EF_Core_Efficient_Querying.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/ShadowProperty",
+            "cwd": "${workspaceFolder}/EF_Core_Efficient_Querying",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
-            "console": "internalConsole",
+            "console": "integratedTerminal",
             "stopAtEntry": false
         },
         {

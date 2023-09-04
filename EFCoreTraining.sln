@@ -89,6 +89,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaction", "Transaction\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_Inmemory_Database", "EF_Core_Inmemory_Database\EF_Core_Inmemory_Database.csproj", "{9BCB591E-A724-4584-9248-BFE66D009DBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_Efficient_Querying", "EF_Core_Efficient_Querying\EF_Core_Efficient_Querying.csproj", "{E988CAB4-9A35-423D-BE18-0EA965DF0297}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -275,6 +277,10 @@ Global
 		{9BCB591E-A724-4584-9248-BFE66D009DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BCB591E-A724-4584-9248-BFE66D009DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BCB591E-A724-4584-9248-BFE66D009DBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E988CAB4-9A35-423D-BE18-0EA965DF0297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E988CAB4-9A35-423D-BE18-0EA965DF0297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E988CAB4-9A35-423D-BE18-0EA965DF0297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E988CAB4-9A35-423D-BE18-0EA965DF0297}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
