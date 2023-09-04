@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data_Concurrency", "Data_Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Value_Conversions", "Value_Conversions\Value_Conversions.csproj", "{E0576373-22FA-4D2B-9070-C88FED4776DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaction", "Transaction\Transaction.csproj", "{A64665F0-428D-42E5-973F-9B0FE4EF9CF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -263,6 +265,10 @@ Global
 		{E0576373-22FA-4D2B-9070-C88FED4776DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0576373-22FA-4D2B-9070-C88FED4776DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0576373-22FA-4D2B-9070-C88FED4776DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A64665F0-428D-42E5-973F-9B0FE4EF9CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A64665F0-428D-42E5-973F-9B0FE4EF9CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A64665F0-428D-42E5-973F-9B0FE4EF9CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A64665F0-428D-42E5-973F-9B0FE4EF9CF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
