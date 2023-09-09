@@ -95,6 +95,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_7_Bulk_Update_And_D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_7_Injecting_Services_Into_Entities", "EF_Core_7_Injecting_Services_Into_Entities\EF_Core_7_Injecting_Services_Into_Entities.csproj", "{D009C8CA-AD2D-4EF4-97BA-2C2CC0368958}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_7_Entity_Splitting", "EF_Core_7_Entity_Splitting\EF_Core_7_Entity_Splitting.csproj", "{215FF113-A4E5-4BF8-ABF1-0B926D6D3250}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -293,6 +295,10 @@ Global
 		{D009C8CA-AD2D-4EF4-97BA-2C2CC0368958}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D009C8CA-AD2D-4EF4-97BA-2C2CC0368958}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D009C8CA-AD2D-4EF4-97BA-2C2CC0368958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{215FF113-A4E5-4BF8-ABF1-0B926D6D3250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{215FF113-A4E5-4BF8-ABF1-0B926D6D3250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{215FF113-A4E5-4BF8-ABF1-0B926D6D3250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{215FF113-A4E5-4BF8-ABF1-0B926D6D3250}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
